@@ -1,0 +1,46 @@
+.error-404 {
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #000a1f;
+  width: 100%;
+}
+
+.error-404 .content {
+  text-align: center;
+}
+
+.error-404 .content img {
+  width: 500px;
+  height: auto;
+}
+
+.error-404 h2 {
+  font-size: 45px;
+}
+
+.error-404 h5 {
+  font-size: 25px;
+  margin-top: 20px;
+  text-align: center;
+}
+.error-404 a {
+  font-size: 25px;
+  margin-top: 20px;
+  text-align: center !important;
+}
+
+@media (max-width: 575px) {
+  .error-404 .content img {
+    width: 300px;
+    height: auto;
+  }
+
+  .error-404 h2 {
+    font-size: 35px;
+  }
+
+  .error-404 h5 {
+    font-size: 18px;
+  }
+}

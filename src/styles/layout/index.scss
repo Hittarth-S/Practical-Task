@@ -1,0 +1,241 @@
+/* DESKTOP HEADER */
+.header-3-desktop {
+  display: block;
+  border-bottom: 1px solid #e5e5e5;
+
+  .header-wrap {
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left-section {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .link-item {
+        font-size: 14px;
+        font-weight: 600;
+        color: #000;
+        text-decoration: none;
+      }
+
+      .link-item:hover {
+        color: #0d0d12;
+      }
+    }
+
+    .center-section {
+      padding: 0px 200px;
+
+      .link-item {
+        font-size: 14px;
+        font-weight: 600;
+        color: #000;
+        text-decoration: none;
+      }
+    }
+
+    .right-section {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .link-item {
+        font-size: 14px;
+        font-weight: 600;
+        color: #000;
+        text-decoration: none;
+      }
+
+      .link-item:hover {
+        color: #0d0d12;
+      }
+    }
+  }
+}
+
+/* MOBILE HEADER */
+.header-3-mobile {
+  display: none;
+  padding: 20px 0px;
+
+  .header-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo-box {
+      img {
+        width: 180px;
+        height: auto;
+      }
+    }
+
+    .navigation-links {
+      .logo-box {
+        img {
+          width: 180px;
+          height: auto;
+        }
+      }
+
+      .navbar {
+        padding: 0px;
+      }
+
+      .main-menu {
+        .menu-link {
+          font-size: 14px;
+          color: #323232;
+          font-weight: 600;
+          padding: 0px 20px;
+          text-transform: uppercase;
+        }
+
+        .menu-link:hover {
+          color: #0d0d12;
+        }
+
+        .call-link {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: #323232;
+          margin-left: 10px;
+          margin-top: 0px;
+
+          p {
+            margin-bottom: 0px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-left: 5px;
+          }
+        }
+
+        .call-link:hover {
+          color: #0d0d12;
+
+          svg {
+            fill: #0d0d12;
+          }
+        }
+
+        .menu-link:first-child {
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+}
+
+/* FOOTER */
+.footer-3 {
+  background-color: #e2e5e6;
+
+  .footer-main {
+    padding: 30px 0px;
+
+    .user-name {
+      font-size: 25px;
+      font-weight: 700;
+      margin-bottom: 0px;
+      color: #000;
+    }
+
+    .user-details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+
+      .details-box {
+        h5 {
+          font-size: 18px;
+          font-weight: 700;
+          color: #000;
+          margin-bottom: 0px;
+        }
+
+        p {
+          font-size: 15px;
+          font-weight: 500;
+          color: #000;
+          margin-bottom: 0px;
+          margin-top: 5px;
+        }
+
+        a {
+          font-size: 15px;
+          font-weight: 500;
+          color: #000;
+          margin-bottom: 0px;
+          display: block;
+          text-decoration: none;
+          margin-top: 5px;
+        }
+      }
+    }
+
+    .footer-small-info {
+      margin-top: 30px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #000;
+      line-height: 18px;
+    }
+  }
+
+  .copyright-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.3);
+
+    h5 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 0px;
+      color: #000;
+
+      a {
+        color: #323232;
+        text-decoration: underline;
+      }
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+
+      .social-media-box {
+        display: block;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        border: 2px solid #323232;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+      }
+
+      .social-media-box:last-child {
+        margin-right: 0px;
+        justify-content: center;
+      }
+
+      .social-media-box:hover {
+        background-color: #323232;
+
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}

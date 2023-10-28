@@ -1,20 +1,28 @@
-# Practical-Task
 
-Admin Module:
+## INSTALLATION ⚒️
 
-Utilizing MongoDB Atlas as the database, React.js for the frontend, and Node.js for the backend.
-Admins can securely log in to the system.
-Perform CRUD operations on products, with fields including product name, description, price, images (multiple), and status.
-Easily filter products by their status.
+Please follow the steps to run the website 🤘
 
+```bash
+# For npm
+npm install --legacy-peer-deps
+```
 
+Now, start the server with the help of command shown below. Open [http://localhost:3000/](http://localhost:3000/) to check your development 🚀.
 
+```bash
+# For npm
+npm run start
+```
 
+## FOLDER STRUCTURE 📁
 
+**Folder structure to be maintained is shown below:**
 
-User Module:
+1. To create a new page in the admin dashboard, create a new folder with the name of the feature to be added inside `src/pages` folder.
+2. Go to the index file inside the `routes` folder and declare the route.
+3. The components used inside the new pages are to be placed inside the `src/components` folder.
 
-Powered by MongoDB Atlas as the database, React.js for the frontend, and Node.js for the backend.
-Users can register to create an account.
-Registered users can log in to access the system.
-View products added by the admin.
+## NOTE 📜
+
+**Please write proper commit messages while pushing the code in this repository.**
