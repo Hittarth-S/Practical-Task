@@ -13,7 +13,7 @@ import { toast } from "react-toastify";
 import moment from 'moment'
 
 /* ICONS */
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 import ReactPaginate from "react-paginate";
 
@@ -30,6 +30,7 @@ const Shop = () => {
   const pageSize = 12;
 
   const [productList, setProductList] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
   const [totalProducts, setTotalProducts] = useState(0);
   const [status, setStatus] = useState(0);
 
@@ -52,6 +53,7 @@ const Shop = () => {
         if (res.status) {
           setTotalProducts(res.data.totalDocs);
           setProductList(res.data?.docs);
+          setTotalPages(res?.data?.totalPages);
         } else {
           toast.error(res?.message);
         }
@@ -66,6 +68,13 @@ const Shop = () => {
       }).finally((res) => {
         setLoading(false);
       });
+  };
+
+  const handlePageClick = (event) => {
+    const selectedPage = event.selected + 1;
+    setLoading(true);
+    setProductList([]);
+    setPage(selectedPage);
   };
 
   const handleClear = () => {
@@ -177,6 +186,25 @@ const Shop = () => {
                 ) : "No Products Found"}
 
               </div>
+              <ReactPaginate
+                className="products-pagination"
+                previousLabel={
+                  <Button className="product-pagination-btn">
+                    <AiOutlineLeft color="#323232" size="20" />
+                  </Button>
+                }
+                nextLabel={
+                  <Button className="product-pagination-btn">
+                    <AiOutlineRight color="#323232" size="20" />
+                  </Button>
+                }
+                breakLabel={"..."}
+                pageCount={totalPages}
+                marginPagesDisplayed={3}
+                pageRangeDisplayed={2}
+                onPageChange={handlePageClick}
+                activeClassName={"active"}
+              />
             </div>
 
             {/* STATUS SIDEBAR */}
