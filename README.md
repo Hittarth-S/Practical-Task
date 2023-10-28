@@ -1,20 +1,21 @@
-# Practical-Task
+# Backend Branch
 
-Admin Module:
+This branch contains the backend code for our project. It's the server-side component that powers the application. The backend is built using Node.js and Express, and it communicates with the database hosted on MongoDB Atlas.
 
-Utilizing MongoDB Atlas as the database, React.js for the frontend, and Node.js for the backend.
-Admins can securely log in to the system.
-Perform CRUD operations on products, with fields including product name, description, price, images (multiple), and status.
-Easily filter products by their status.
+## Features:
 
+- RESTful API for managing products and user accounts.
+- Secure authentication and authorization mechanisms.
+- Seamless integration with the MongoDB Atlas database.
+- Efficient handling of product data.
 
+## Getting Started:
 
+To set up and run the backend locally, follow these steps:
 
+1. Clone this repository.
+2. Install the required dependencies with `npm install`.
+3. Configure your MongoDB Atlas credentials and connection URL.
+4. Run the server using `npm start`.
 
-
-User Module:
-
-Powered by MongoDB Atlas as the database, React.js for the frontend, and Node.js for the backend.
-Users can register to create an account.
-Registered users can log in to access the system.
-View products added by the admin.
+Make sure to refer to the detailed documentation for specific endpoints and functionalities.
