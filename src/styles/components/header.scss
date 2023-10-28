@@ -1,0 +1,127 @@
+.dashboard-header {
+    background-color: #0D0D12;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba($color: #FFF, $alpha: 0.1);
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left-navigation {
+            display: flex;
+            align-items: center;
+
+            .logo-box {
+                background-color: #FFF;
+                border-radius: 5px;
+                padding: 5px 10px;
+            }
+    
+            .header-logo {
+                height: 50px;
+                width: auto;
+            }
+    
+            .navigation-options {
+                display: flex;
+                align-items: center;
+                margin-left: 20px;
+    
+                .navigation-item {
+                    font-size: 14px;
+                    padding: 0px 15px;
+                    color: rgba($color: #FFF, $alpha: 0.5);
+                    text-decoration: none;
+                    font-weight: 500;
+                }
+
+                .navigation-item:hover {
+                    color: #FFF;
+                }
+
+                .navigation-item.active {
+                    color: #FFF;
+                    font-weight: 600;
+                }
+            }
+        }
+    
+        .right-navigation {
+            display: flex;
+            align-items: center;
+
+            .custom-options {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                padding: 10px 10px;
+                border-radius: 5px;
+                margin-right: 15px;
+            }
+
+            .custom-options:hover {
+                border-radius: 5px;
+                background-color: rgba($color: #FFF, $alpha: 0.3);
+            }
+
+            .dropdown-toggle {
+                background-color: transparent;
+                border-color: transparent;
+            }
+
+            .dropdown-toggle::after {
+                display: none;
+            }
+
+            .profile-avatar {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0px;
+        
+                .admin-details {
+                    margin-right: 15px;
+                    text-align: end;
+        
+                    p {
+                        margin-bottom: 0px;
+                        color: #D3D3E3;
+                        font-size: 12px;
+                    }
+        
+                    h5 {
+                        margin-bottom: 0px;
+                        color: #FFF;
+                        font-size: 14px;
+                        margin-top: 5px;
+                    }
+                }
+        
+                img {
+                    background-color: #FFF;
+                    height: 40px;
+                    width: 40px;
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
+            }
+
+            .profile-dropdown {
+                .profile-dropdown-menu {
+                    min-width: 200px;
+                    border: 0px solid transparent;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    left: -50px !important;
+
+                    .menu-item {
+                        font-size: 14px;
+                        font-weight: 600;
+                        padding: 10px 20px;
+                        color: #323232;
+                    }
+                }
+            }
+        }
+    }
+}

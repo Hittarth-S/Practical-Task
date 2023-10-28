@@ -1,0 +1,91 @@
+.reports {
+    .bg-blue-banner {
+        background-color: #323232;
+        height: 250px;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .page-head {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        h1 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #FFF;
+        }
+
+        p {
+            margin-bottom: 0px;
+            color: #0D0D12;
+            font-weight: 600;
+        }
+
+        .import-btn {
+            display: flex;
+            align-items: center;
+            padding: 8px 25px;
+            background-color: #FFF;
+            font-size: 14px;
+            color: #323232;
+            font-weight: 600;
+            border: 0px solid #DBDFEA;
+
+            .btn-icon {
+                margin-right: 10px;
+            }
+        }
+
+        .add-btn {
+            background-color: #FFF;
+            margin-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0px solid transparent;
+        }
+    }
+
+    .reports-card {
+        .reports-list-body {
+            .react-select {
+                width: 100%;
+        
+                .action-select__control {
+                    font-size: 14px;
+                    border: 1px solid #DBDFEA;
+        
+                    .action-select__indicator-separator {
+                        display: none;
+                    }
+        
+                    .action-select__placeholder {
+                        font-size: 13px;
+                    }
+                }
+        
+                .action-select__menu {
+                    .action-select__menu-list {
+                        .action-select__option {
+                            font-size: 13px;
+                            font-weight: 400;
+                            color: #323232;
+                            background-color: #FFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .users-list-body {
+        padding: 0px;
+
+        .rdt_Pagination {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+}

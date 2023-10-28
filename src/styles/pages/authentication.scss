@@ -1,0 +1,151 @@
+.authentication {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0 !important;
+
+    .authentication-form {
+        width: 100%;
+        height: 100vh;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .login-form {
+        padding: 40px;
+        border: 1px solid #DBDFEA;
+        border-radius: 5px;
+
+        .logo {
+            .company-logo {
+                width: auto;
+                height: 70px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .form-heading {
+            h1 {
+                font-size: 22px;
+                font-weight: 700;
+            }
+
+            p {
+                font-size: 15px;
+                margin-bottom: 0px;
+                color: #323232;
+            }
+        }
+
+        .form-details {
+            margin-top: 20px;
+        }
+
+        .small-text {
+            font-size: 13px;
+            margin-top: 10px;
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                font-weight: 600;
+                margin-bottom: 0px;
+                color: #0D0D12;
+            }
+        }
+
+        .forgot-link {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #0D0D12;
+            text-decoration: none;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            text-align: end;
+        }
+    }
+}
+
+.verification-header {
+    h5 {
+        margin-bottom: 0px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+.verification-body {
+    .email {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #E5E5E5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        p {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        h5 {
+            font-size: 15px;
+            font-weight: 500;
+            color: #323232;
+        }
+
+        .change-email-btn {
+            background-color: #FFF;
+            padding: 5px 8px;
+            color: #0D0D12;
+            font-size: 14px;
+            border-color: #FFF;
+            font-weight: 600;
+        }
+    }
+
+    p {
+        color: grey;
+        font-size: 14px;
+    }
+
+    .otp-input {
+        width: 100%;
+
+        label {
+            font-size: 13px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .otp-control {
+            input {
+                border: 1px solid #E5E5E5;
+                width: 50px !important;
+                height: 50px !important;
+                border-radius: 5px;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.verification-footer {
+    justify-content: space-between;
+
+    .resend-code-btn {
+        background-color: #FFF;
+        padding: 5px 8px;
+        color: #0D0D12;
+        font-size: 14px;
+        border-color: #FFF;
+        font-weight: 600;
+    }
+
+    .verify-email-btn {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}

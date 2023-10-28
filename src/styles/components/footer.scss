@@ -1,0 +1,33 @@
+.auth-footer {
+    bottom: 0;
+    width: 100%;
+    padding: 20px 22px;
+    background-color: #FFF;
+    border-top: 1px solid #E5E9F2;
+
+    .footer-options {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+            color: #8094AE;
+            margin-bottom: 0px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+
+            .link-item {
+                font-size: 14px;
+                color: #0D0D12;
+                font-weight: 600;
+                text-decoration: none;
+                padding: 0px 15px;
+            }
+        }
+    }
+}
