@@ -3,14 +3,10 @@ import React, { useState } from "react";
 
 import { Button, Spinner } from "react-bootstrap";
 
-import { useDispatch } from "react-redux";
-
 import { useFormik } from "formik";
 import * as yup from "yup";
 
 import { toast } from "react-toastify";
-
-import actions from "../redux/actions/userAction";
 
 import { register } from "../service/api";
 
@@ -23,8 +19,6 @@ const validationSchema = yup.object().shape({
 });
 
 const Register = (props) => {
-
-    const dispatch = useDispatch();
 
     // States
     const [loading, setLoading] = useState(false);

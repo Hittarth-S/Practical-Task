@@ -3,16 +3,13 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-import { Button, Spinner, Modal } from "react-bootstrap";
+import { Button, Spinner } from "react-bootstrap";
 
 import { useNavigate } from "react-router";
 
 import { Link } from "react-router-dom";
 
 import { toast } from "react-toastify";
-
-/* Date / Time Fromatter */
-import moment from 'moment'
 
 /* ICONS */
 import { AiOutlineClose, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
@@ -36,9 +33,6 @@ const Shop = () => {
   const [totalPages, setTotalPages] = useState(0);
   const [totalProducts, setTotalProducts] = useState(0);
   const [status, setStatus] = useState(0);
-
-  const [viewModalShow, setViewModalShow] = useState(false);
-  const [viewData, setViewData] = useState(null);
 
   // Functions
   /* GET PRODUCTS LIST */
@@ -83,7 +77,7 @@ const Shop = () => {
   const handleClear = () => {
     setStatus(null)
   }
-  const handleClose = () => setViewModalShow(false);
+
 
   /* USE EFFECT */
   useEffect(() => {
@@ -146,9 +140,7 @@ const Shop = () => {
                 {productList?.length > 0 && (
                   productList?.map((product, index) => {
                     return <div key={index} className="col-xl-4 col-sm-12 pb-3" onClick={() => {
-
                       navigate('/product/' + product?._id)
-
                     }}>
                       <div className="product-card">
                         <img
@@ -225,36 +217,6 @@ const Shop = () => {
               </div>
             </div>
 
-            {/* PRODUCT MODAL */}
-            <Modal show={viewModalShow} backdrop="static" onHide={handleClose}>
-              <Modal.Header closeButton>
-                <Modal.Title>Product Details</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                <p><strong>Product Name: </strong>{viewData?.name}</p>
-                <p><strong>Price: </strong>₹{viewData?.price}</p>
-
-                <p><strong>Description: </strong>{viewData?.description}</p>
-                <p><strong>Created At: </strong> {moment(viewData?.createdAt).format('MMM, DD YYYY, hh:mm A')}</p>
-
-
-                <h6>Images</h6>
-
-                <div className="row file-uploader">
-                  {viewData?.image?.length > 0 ? (
-                    viewData?.image?.map((element, index) => {
-                      return <div className="col-xl-4 col-sm-12  uploaded-image mb-2">
-                        <a href={`${element?.url}`} target="_blank" rel="noreferrer" >
-                          <img src={`${element?.url}`} alt="Profile" />
-                        </a>
-
-                      </div>
-                    })
-                  ) : <p>No Images Found</p>}
-
-                </div>
-              </Modal.Body>
-            </Modal>
           </div>
         </div>
       </div>

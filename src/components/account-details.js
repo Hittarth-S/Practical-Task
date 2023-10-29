@@ -2,8 +2,6 @@ import { Button } from "react-bootstrap";
 
 import moment from "moment";
 
-import { toast } from "react-toastify";
-
 import { useSelector, useDispatch } from "react-redux";
 import actions from "../redux/actions/userAction";
 

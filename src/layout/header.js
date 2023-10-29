@@ -16,6 +16,9 @@ const Header = () => {
             <div className="right-section">
               <Link to='/shop' className="link-item" >SHOP</Link>
             </div>
+            <div className="right-section">
+              <Link to='/cart' className="link-item" >CART</Link>
+            </div>
           </div>
         </div>
       </header>
