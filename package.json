@@ -1,7 +1,7 @@
 {
-  "name": "tamara-micciche-backend",
+  "name": "frontend-user-server",
   "version": "1.0.0",
-  "description": "Tamara Micciche - backend",
+  "description": "frontend-user-server",
   "main": "index.js",
   "dependencies": {
     "async": "^3.2.4",
