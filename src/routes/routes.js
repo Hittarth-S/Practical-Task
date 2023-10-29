@@ -18,6 +18,8 @@ import Layout from '../layout/index';
 import Home from '../pages/index';
 import Account from "../pages/account";
 import Shop from "../pages/shop";
+import ProductDetails from "../pages/product-details";
+import Cart from "../pages/cart";
 
 import PageNotFound from "../pages/404";
 
@@ -41,6 +43,8 @@ const WebsiteRoutes = () => {
             <Route path='/' element={<Layout><Home /></Layout>} />
             <Route path='/account' element={<Layout><Account /></Layout>} />
             <Route path='/shop' element={<Layout><Shop /></Layout>} />
+            <Route path='/product/:id' element={<Layout><ProductDetails /></Layout>} />
+            <Route path='/cart' element={<Layout><Cart /></Layout>} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Router>

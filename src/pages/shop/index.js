@@ -5,6 +5,8 @@ import { Helmet } from "react-helmet";
 
 import { Button, Spinner, Modal } from "react-bootstrap";
 
+import { useNavigate } from "react-router";
+
 import { Link } from "react-router-dom";
 
 import { toast } from "react-toastify";
@@ -23,6 +25,7 @@ import {
 } from "../../service/api";
 
 const Shop = () => {
+  const navigate = useNavigate();
 
   // States
   const [loading, setLoading] = useState(false);
@@ -135,15 +138,17 @@ const Shop = () => {
             ) : null}
 
             {loading && (<p> <Spinner /> Please wait...</p>)}
+            {!loading && productList?.length === 0 && ("No Products Found")}
 
             {/* PRODUCTS LIST */}
             <div className="col-xl-9 col-sm-12">
               <div className="row">
-                {productList?.length > 0 ? (
+                {productList?.length > 0 && (
                   productList?.map((product, index) => {
                     return <div key={index} className="col-xl-4 col-sm-12 pb-3" onClick={() => {
-                      setViewData(product)
-                      setViewModalShow(true)
+
+                      navigate('/product/' + product?._id)
+
                     }}>
                       <div className="product-card">
                         <img
@@ -183,7 +188,7 @@ const Shop = () => {
                       </div>
                     </div>
                   })
-                ) : "No Products Found"}
+                )}
 
               </div>
               <ReactPaginate
