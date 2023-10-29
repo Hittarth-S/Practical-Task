@@ -125,7 +125,7 @@ export const deleteProductImageByProductImageId = (id, productImageId) => {
 export const getUsersList = (data) => {
   return new Promise(async (resolve, reject) => {
     await request
-      .get(`/users`, { params: data })
+      .get(`/user`, { params: data })
       .then((res) => {
         resolve(res.data);
       })
@@ -137,7 +137,7 @@ export const getUsersList = (data) => {
 export const getUsersDetailsById = (id) => {
   return new Promise(async (resolve, reject) => {
     await request
-      .get(`users/` + id)
+      .get(`user/` + id)
       .then((res) => {
         resolve(res.data);
       })
@@ -149,7 +149,7 @@ export const getUsersDetailsById = (id) => {
 export const editUsersDetailsById = (id, body) => {
   return new Promise(async (resolve, reject) => {
     await request
-      .put(`users/` + id, body)
+      .put(`user/` + id, body)
       .then((res) => {
         resolve(res.data);
       })
@@ -161,7 +161,7 @@ export const editUsersDetailsById = (id, body) => {
 export const deleteUsers = (id) => {
   return new Promise(async (resolve, reject) => {
     await request
-      .delete(`users/` + id)
+      .delete(`user/` + id)
       .then((res) => {
         resolve(res.data);
       })
