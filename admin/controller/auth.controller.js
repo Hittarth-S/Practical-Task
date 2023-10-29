@@ -60,8 +60,18 @@ module.exports.login = async (request, response, next) => {
   try {
     const { email, password } = request.body;
 
+    const checkRole = await Role.findOne({ role: "SUPER-ADMIN" });
+    if (!checkRole) {
+      return response.status(409).json({
+        status: false,
+        message: "Role Not Found",
+        data: null,
+      });
+    }
+
     const userData = await Admin.findOne({
       email: email,
+      role: checkRole._id,
       isDeleted: false,
     })
       .select("+password")

@@ -27,7 +27,7 @@ module.exports.register = async (request, response, next) => {
         // check if user is exists
         const checkUser = await Users.findOne({
             email: email.toLowerCase(),
-            role: checkRole?._id,
+            role: checkRole._id,
             isDeleted: false,
         });
         if (checkUser) {
